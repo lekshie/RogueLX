@@ -1,0 +1,21 @@
+{
+    "name": "Gemini Movie Streamer",
+    "short_name": "Movie App",
+    "description": "A responsive, modern movie browsing application powered by Gemini.",
+    "start_url": "./movie_app_pwa_updates.html",
+    "display": "standalone",
+    "background_color": "#1f2937",
+    "theme_color": "#3b82f6",
+    "icons": [
+        {
+            "src": "images/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
