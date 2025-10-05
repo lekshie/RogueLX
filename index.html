@@ -6,6 +6,9 @@
     <title>Rogue LX App - Fully Responsive</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+
     <!-- Font Awesome for Icons (Required for the design) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- Google Font: Inter (for general text) and Oswald (for title) -->
@@ -1501,6 +1504,19 @@
             const initialPage = window.location.hash.substring(1) || 'intro';
             navigateTo(initialPage);
         });
+        if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service_worker.js')
+      .then(function(registration) {
+        console.log('ServiceWorker registration successful:', registration);
+      })
+      .catch(function(err) {
+        console.log('ServiceWorker registration failed:', err);
+      });
+  });
+}
+
     </script>
+    
 </body>
 </html>
